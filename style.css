@@ -1,0 +1,60 @@
+/* Reset básico para quitar márgenes molestos */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    background-color: #fccaca; /* El rosa suave de fondo */
+}
+
+.barra {
+    background-color: #9b0103; /* El rojo intenso */
+    height: 80px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 50px;
+    
+    /* El truco de las esquinas redondeadas abajo */
+    border-bottom-left-radius: 30px;
+    border-bottom-right-radius: 30px;
+    
+    box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    height: 100%; /* Se ajusta a la altura de la barra */
+}
+
+.logo-img {
+    height: 60px; /* Ajusta este valor según qué tan grande quieras el logo */
+    width: auto;  /* Mantiene la proporción original */
+    object-fit: contain;
+    padding: 5px 0;
+}
+
+.nav-links {
+    display: flex;
+    list-style: none; /* Quita los puntos de la lista */
+}
+
+.nav-links li {
+    margin-left: 30px;
+}
+
+.nav-links a {
+    color: white;
+    text-decoration: none; /* Quita el subrayado azul */
+    font-size: 1.2rem;
+    font-weight: 500;
+    transition: 0.3s;
+}
+
+.nav-links a:hover {
+    color: #fccaca; /* Efecto al pasar el mouse */
+}
