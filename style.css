@@ -1,3 +1,4 @@
+/* Te he dejado algunos comentarios por si te pierdes:D */
 /* Reset básico para quitar márgenes molestos */
 * {
     margin: 0;
@@ -7,11 +8,11 @@
 }
 
 body {
-    background-color: #fccaca; /* El rosa suave de fondo */
+    background-color: #fccaca; /* Rosa suave de fondo */
 }
 
 .barra {
-    background-color: #9b0103; /* El rojo intenso */
+    background-color: #9b0103; /* Ajusta a un rojo intenso */
     height: 80px;
     display: flex;
     align-items: center;
@@ -28,11 +29,11 @@ body {
 .logo {
     display: flex;
     align-items: center;
-    height: 100%; /* Se ajusta a la altura de la barra */
+    height: 100%; /* Se ajusta a la altura de la barra, queda perfecto */
 }
 
 .logo-img {
-    height: 60px; /* Ajusta este valor según qué tan grande quieras el logo */
+    height: 60px; /* Ajusta este valor según qué tan grande quieras el logo Pao, experimenta con esto */
     width: auto;  /* Mantiene la proporción original */
     object-fit: contain;
     padding: 5px 0;
@@ -40,7 +41,7 @@ body {
 
 .nav-links {
     display: flex;
-    list-style: none; /* Quita los puntos de la lista */
+    list-style: none; /* Quita los puntos de la lista,  */
 }
 
 .nav-links li {
@@ -57,4 +58,108 @@ body {
 
 .nav-links a:hover {
     color: #fccaca; /* Efecto al pasar el mouse */
+}
+
+.slider-container {
+    width: 100%;
+    overflow: hidden;
+    background: #fff0f5;
+    padding: 20px 0;
+}
+
+.slider-track {
+    display: flex;
+    /* Ajusta el ancho: (ancho de 1 imagen + gaps) * total de imágenes */
+    width: calc(300px * 8); 
+    animation: scroll 30s linear infinite;
+}
+
+.slider-track:hover {
+    animation-play-state: paused; /* Se detiene al pasar el mouse, osea, las imágenes (obvio:b) */
+}
+
+.slide {
+    width: 250px;
+    padding: 0 15px;
+}
+
+.slide img {
+    width: 100%;
+    border-radius: 15px;
+    box-shadow: 0 4px 8px rgba(160, 96, 96, 0.1);
+}
+
+@keyframes scroll {
+    0% {
+        transform: translateX(0);
+    }
+    100% {
+        /* Aquí mueves exactamente la mitad del ancho total */
+        transform: translateX(calc(-300px * 4)); 
+    }
+}
+
+/* Estilos para el Footer */
+.footer-haru {
+    background-color: #121212; /* Color oscuro para contrastar */
+    color: #ffffff;
+    padding: 40px 0 20px 0;
+    margin-top: 60px; /* Espacio después del slider */
+    border-top: 4px solid #ff4d4d; /* Una línea roja delgada para unir con el header */
+}
+
+.footer-content {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.footer-section h3 {
+    color: #ff4d4d;
+    letter-spacing: 2px;
+}
+
+.footer-links ul {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-links a {
+    color: #ffc0cb; /* El rosa del fondo pero en el texto para que resalte */
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+.footer-links a:hover {
+    color: #ffffff;
+    text-decoration: underline;
+}
+
+.footer-contact p {
+    font-size: 0.9rem;
+    color: #bbb;
+}
+
+.intro-text {
+    text-align: center;
+    padding: 60px 20px;
+    background-color: #ffc0cb; /* El rosa de fondo */
+}
+
+.intro-text h1 {
+    font-size: 3rem;
+    color: #ff4d4d; /* El rojo de t barra */
+    text-transform: uppercase;
+    letter-spacing: 5px;
+    margin-bottom: 10px;
+}
+
+.intro-text {
+    font-size: 1.2rem;
+    color: #121212; /* El oscuro del footer */
+    font-style: italic;
+    opacity: 0.8;
 }
