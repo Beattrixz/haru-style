@@ -206,3 +206,221 @@ body {
     transform: scale(1.05); /* Efecto de zoom al pasar el mouse */
     cursor: pointer;
 }
+
+/* --- ESTILOS GENERALES DE LANDING --- */
+html {
+    scroll-behavior: smooth; /* Efecto de desplazamiento suave entre secciones */
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; /* O la fuente que prefieras */
+}
+
+body {
+    margin: 0;
+    background-color: #fdf2f2; /* Tu rosa muy claro de fondo */
+    color: #333;
+}
+
+section {
+    padding: 80px 20px; /* Espaciado uniforme para las secciones */
+}
+
+h2.section-title {
+    text-align: center;
+    color: #800000; /* Tu granate */
+    font-size: 2.8rem;
+    margin-bottom: 50px;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+}
+
+/* --- ESTILOS DE BOTONES --- */
+.btn-primary {
+    display: inline-block;
+    background-color: #800000; /* Tu granate */
+    color: white;
+    padding: 15px 35px;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 5px;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    border: none;
+    cursor: pointer;
+    text-transform: uppercase;
+}
+
+.btn-primary:hover {
+    background-color: #a00000;
+    transform: translateY(-3px);
+}
+
+.highlight {
+    color: #800000; /* Granate para resaltar */
+}
+
+/* --- 1. HERO SECTION --- */
+.hero-section {
+    background-color: #fdf2f2; /* Rosa claro */
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 80vh;
+}
+
+.hero-content {
+    max-width: 800px;
+}
+
+.hero-content h1 {
+    font-size: 3.5rem;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+.hero-content p {
+    font-size: 1.3rem;
+    line-height: 1.7;
+    margin-bottom: 40px;
+    color: #555;
+}
+
+.cta-group {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+}
+
+.trust-text {
+    font-size: 0.9rem;
+    color: #777;
+}
+
+/* --- 2. ESTILOS ESTRELLA (GRID) --- */
+.estilos-section {
+    background-color: #fff;
+}
+
+.estilos-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.estilo-card {
+    background-color: #fdf2f2; /* Rosa claro */
+    padding: 30px;
+    border-radius: 10px;
+    border-left: 5px solid #800000; /* Granate */
+    box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+}
+
+.estilo-card h3 {
+    color: #800000;
+    margin-top: 0;
+}
+
+.estilo-card .concepto {
+    font-style: italic;
+    color: #555;
+    margin-bottom: 15px;
+}
+
+.estilo-card ul.elementos {
+    list-style-type: '→ ';
+    color: #333;
+    padding-left: 20px;
+}
+
+/* --- 3. NUESTRA ESENCIA --- */
+.valor-section {
+    background-color: #fdf2f2; /* Rosa claro */
+}
+
+.valor-container {
+    max-width: 800px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.valor-container h2 {
+    color: #800000;
+}
+
+.cita {
+    font-size: 1.4rem;
+    font-style: italic;
+    color: #555;
+    border-left: 5px solid #800000;
+    padding-left: 20px;
+    margin: 30px 0;
+    text-align: left;
+}
+
+.puntos-valor {
+    text-align: left;
+}
+
+.punto {
+    margin-bottom: 20px;
+}
+
+/* --- 4. CIERRE Y CAPTURA --- */
+.contacto-section {
+    background-color: white;
+}
+
+.contacto-container {
+    max-width: 700px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.subscribe-form {
+    display: flex;
+    gap: 15px;
+    margin-top: 30px;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.subscribe-form input[type="email"] {
+    flex-grow: 1;
+    padding: 15px;
+    border: 2px solid #ccc;
+    border-radius: 5px;
+}
+
+.subscribe-form button {
+    flex-shrink: 0;
+}
+
+/* --- ESTILOS DE TU FOOTER (Adaptados para coexistir) --- */
+.footer-haru {
+    background-color: #1a1a1a; /* Tu negro/rosa muy oscuro */
+    color: white;
+    padding: 40px 20px;
+}
+
+.footer-content {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.footer-section h3 {
+    color: #ff4d4d; /* Rosa brillante para el logo */
+}
+
+.footer-section ul {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-section a {
+    color: white;
+    text-decoration: none;
+}
