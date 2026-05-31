@@ -35,11 +35,9 @@ section {
 /* ==========================================================================
    2. ENCABEZADO 
    ========================================================================== */
-
 .contenedor-encabezado {
     background-color: #800000;
-    /* Reducimos drásticamente los paddings para que la barra sea delgada */
-    padding: 10px 40px 15px 40px; 
+    padding: 10px 40px 15px 40px; /* Barra delgada */
     
     /* EFECTO BURBUJA SUTIL: Bordes redondeados en las esquinas inferiores */
     border-bottom-left-radius: 35px;
@@ -60,7 +58,7 @@ section {
     height: 50px; /* Forzamos una altura máxima del contenedor interno */
 }
 
-/* CONTROL DEL LOGO: Esto evitará que se vea gigante */
+/* CONTROL DEL LOGO: Evita que se vea gigante */
 .logotipo {
     display: flex;
     align-items: center;
@@ -99,10 +97,6 @@ section {
 
 .enlaces-navegacion a:hover {
     color: #f6b1b4; /* Tono rosa de contraste */
-}
-
-.enlaces-navegacion a:hover {
-    color: #f6b1b4; /* Tono rosa correcto al pasar el cursor */
 }
 
 /* ==========================================================================
@@ -198,14 +192,7 @@ section {
 }
 
 /* ==========================================================================
-   6. SECCIÓN ESTILOS (BLOQUES CON DESPLEGABLES NATIVOS HTML5)
-   ========================================================================== */
-.seccion-estilos {
-    background-color: #ffffff;
-}
-
-/* ==========================================================================
-   6. SECCIÓN ESTILOS (TARJETAS FIJAS SEGÚN MAQUETA)
+   6. SECCIÓN ESTILOS (BURBUJAS FIJAS DE PAÍSES)
    ========================================================================== */
 .seccion-estilos {
     background-color: #fdf2f2; /* Mantiene el fondo claro general */
@@ -269,97 +256,81 @@ section {
     letter-spacing: 0.5px;
 }
 
-.cuadros-paises-contenedor {
-    display: flex;
-    justify-content: center;
-    gap: 40px;
-    flex-wrap: wrap;
-    max-width: 1200px;
-    margin: 0 auto;
+/* ==========================================================================
+   6.B SECCIÓN DETALLES DE ESTILOS 
+   ========================================================================== */
+.seccion-detalles-estilos {
+    background-color: #fdf2f2; /* El fondo rosa pálido  */
+    padding: 60px 20px;
 }
 
-/* Los bloques principales granates tipo contenedor */
-.bloque-pais-burbuja {
-    background-color: #800000;
-    color: #ffffff;
-    padding: 35px;
-    border-radius: 30px; /* Bordes muy curvos */
-    flex: 1;
-    min-width: 340px;
-    max-width: 500px;
-    box-shadow: 0 8px 24px rgba(0,0,0,0.08);
-}
-
-.bloque-pais-burbuja h3 {
+/* Contenedor individual para cada bloque de estilo */
+.contenedor-presentacion-estilo {
+    max-width: 1100px;
+    margin: 0 auto 100px auto; /* Margen inferior grande para separar cada bloque */
     text-align: center;
-    font-size: 1.8rem;
+}
+
+/* Título superior de cada look */
+.titulo-subestilo {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700;
+    color: #800000;
+    font-size: 2.3rem;
+    margin-bottom: 40px;
     margin-top: 0;
-    border-bottom: 2px dashed #f6b1b4;
-    padding-bottom: 15px;
 }
 
-.lista-subestilos {
-    margin-top: 20px;
+/* La fila que alinea la foto y la descripción */
+.fila-contenido-estilo {
+    display: flex;
+    align-items: center; /* Alinea verticalmente al centro la foto y la burbuja */
+    justify-content: center;
+    gap: 60px; /* Separación entre columnas */
+    flex-wrap: wrap; /* Es responsivo */
 }
 
-.desplegable-estilo {
-    margin-bottom: 25px;
+/* Contenedores de columnas */
+.columna-imagen-estilo,
+.columna-texto-estilo {
+    flex: 1;
+    min-width: 320px;
+    max-width: 480px;
 }
 
-/* El elemento summary que se comporta como el hipervínculo clickeable */
-.enlace-estilo {
-    font-size: 1.2rem;
-    font-weight: bold;
-    cursor: pointer;
-    text-decoration: underline;
-    color: #ffffff;
-    padding: 5px 0;
-    outline: none;
-    list-style: none; /* Intenta remover el triángulo nativo en algunos navegadores */
-}
-
-.enlace-estilo:hover {
-    color: #f6b1b4; /* Destello con el rosa de contraste al pasar el cursor */
-}
-
-.enlace-estilo::marker {
-    color: #f6b1b4; /* Color de la flecha nativa si el navegador la fuerza */
-}
-
-/* Caja contenedora que aparece de forma automática al abrir el <details> */
-.contenido-desplegado {
-    background-color: #f6b1b4; /* TONO EXACTO: f6b1b4 */
-    padding: 20px;
-    border-radius: 15px;
-    margin-top: 12px;
-    box-shadow: inset 0 2px 8px rgba(0,0,0,0.06);
-}
-
-/* Grilla para las 3 imágenes lado a lado */
-.galeria-fotos {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 10px;
-    margin-bottom: 15px;
-}
-
-.cuadro-foto img {
+/* Imagen con curvas pronunciadas estilo cápsula */
+.imagen-vertical-estilo {
     width: 100%;
-    height: 110px;
+    height: auto;
+    max-height: 550px;
     object-fit: cover;
-    border-radius: 10px;
-    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    border-radius: 60px; /* Súper redondeada */
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.05);
 }
 
-.descripcion-estilo {
-    color: #121212; /* Color oscuro para asegurar excelente contraste sobre el rosa f6b1b4 */
-    font-size: 0.95rem;
+/* BURBUJA DE TEXTO GRANATE CON SOMBRA SÓLIDA ROSA  */
+.burbuja-descripcion-granate {
+    background-color: #800000;
+    padding: 45px 35px;
+    border-radius: 40px;
+    text-align: left; /* Alineación a la izquierda según la maqueta */
+    
+    /* Sombra rosa desfasada hacia abajo y la izquierda */
+    box-shadow: -15px 15px 0px #f6b1b4; 
+}
+
+/* Texto interno de la burbuja */
+.burbuja-descripcion-granate p {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700; /* Montserrat bold */
+    color: #ffffff;
+    font-size: 1.15rem;
     line-height: 1.6;
     margin: 0;
 }
 
 /* ==========================================================================
-   7. SECCIÓN NUESTRA ESENCIA (VALOR)
+   7. SECCIÓN NUESTRA ESENCIA 
    ========================================================================== */
 .seccion-esencia {
     background-color: #fdf2f2;
@@ -396,7 +367,7 @@ section {
 }
 
 /* ==========================================================================
-   8. SECCIÓN CONTACTO (CAPTURAR DE CORREO)
+   8. SECCIÓN CONTACTO 
    ========================================================================== */
 .seccion-contacto {
     background-color: #ffffff;
