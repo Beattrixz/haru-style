@@ -1,10 +1,11 @@
 /* ==========================================================================
    1. CONFIGURACIONES GENERALES Y FUENTES
    ========================================================================== */
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Julius+Sans+One&family=Montserrat:wght@400;700&display=swap');
 
 html {
     scroll-behavior: smooth; /* Permite el desplazamiento suave al usar el menú ancla */
+    scroll-padding-top: 90px; /* Evita que la barra de navegación fija tape los títulos al bajar */
     font-family: 'Montserrat', sans-serif;
 }
 
@@ -17,6 +18,11 @@ body {
 
 section {
     padding: 80px 20px; /* Espaciado interno estándar para separar las secciones */
+}
+
+/* Aplicación de la nueva tipografía */
+h1, h2, h3, .titulo-seccion, .nombre-pais, .titulo-subestilo {
+    font-family: 'Julius Sans One', sans-serif;
 }
 
 .resaltado-rojo {
@@ -141,7 +147,10 @@ section {
     margin-bottom: 20px;
 }
 
+/* Removido el bold heredado para que se muestre en regular */
 .contenido-inicio p {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 400; 
     font-size: 1.25rem;
     line-height: 1.8;
     color: #444;
@@ -213,47 +222,72 @@ section {
 .tarjeta-pais-burbuja {
     background-color: #800000; /* Color granate principal */
     color: #ffffff;
-    padding: 60px 40px; /* Relleno amplio para que se vea imponente */
+    padding: 60px 40px; 
     border-radius: 50px; /* Bordes súper redondeados */
     flex: 1;
     min-width: 320px;
     max-width: 450px;
     
-    /* El truco del sombreado rosa de fondo que se ve descentrado en el diseño */
+    /* Mantenemos el efecto de sombreado rosa original */
     box-shadow: 12px 12px 0px #f6b1b4; 
     
     display: flex;
     flex-direction: column;
     justify-content: center;
-    align-items: center;
+    align-items: flex-start; 
 }
 
 /* Títulos de los países dentro de la burbuja */
 .nombre-pais {
-    font-family: 'Montserrat', sans-serif;
-    font-weight: 700; /* Montserrat Bold */
+    font-weight: 700;
     font-size: 1.9rem;
     margin-top: 0;
     margin-bottom: 25px;
     text-align: center;
+    width: 100%; /* Forzar centrado del título del país dentro de la tarjeta */
 }
 
-/* Lista de subestilos en color blanco */
+/* Lista de subestilos configurada con alineación a la izquierda */
 .lista-estilos-fijos {
     list-style: none;
     padding: 0;
     margin: 0;
-    text-align: center;
+    text-align: left; /* Alineado a la izquierda */
+    width: 100%;
 }
 
 .lista-estilos-fijos li {
     font-family: 'Montserrat', sans-serif;
-    font-weight: 700; /* Montserrat Bold */
+    font-weight: 400; /* Removido el Bold a Regular como solicitó tu profesor Pao :D */
     font-size: 1.15rem;
     line-height: 1.8;
-    margin-bottom: 10px;
-    color: #ffffff;
+    margin-bottom: 12px;
     letter-spacing: 0.5px;
+    display: flex;
+    align-items: center; /* Alineación vertical de la rayita con el texto */
+}
+
+/* Elemento para generar la rayita sutil */
+.lista-estilos-fijos li::before {
+    content: "";
+    display: inline-block;
+    width: 15px;
+    height: 2px;
+    background-color: #f6b1b4; /* Color rosa suave para el detalle */
+    margin-right: 12px; /* Espacio de separación con el texto */
+    flex-shrink: 0;
+}
+
+/* Reseteo y propiedades de los enlaces ancla internos */
+.enlace-estilo-interno {
+    text-decoration: none;
+    color: #ffffff;
+    transition: color 0.2s ease, transform 0.2s ease;
+}
+
+.enlace-estilo-interno:hover {
+    color: #f6b1b4;
+    transform: translateX(3px);
 }
 
 /* ==========================================================================
@@ -273,7 +307,6 @@ section {
 
 /* Título superior de cada look */
 .titulo-subestilo {
-    font-family: 'Montserrat', sans-serif;
     font-weight: 700;
     color: #800000;
     font-size: 2.3rem;
@@ -308,24 +341,22 @@ section {
     box-shadow: 0 10px 25px rgba(0, 0, 0, 0.05);
 }
 
-/* BURBUJA DE TEXTO GRANATE CON SOMBRA SÓLIDA ROSA  */
+/* BURBUJA DE TEXTO GRANATE SIN LA SOMBRA SÓLIDA ANTERIOR */
 .burbuja-descripcion-granate {
     background-color: #800000;
     padding: 45px 35px;
     border-radius: 40px;
     text-align: left; /* Alineación a la izquierda */
-    
-    /* Sombra rosa desfasada hacia abajo y la izquierda */
-    box-shadow: -15px 15px 0px #f6b1b4; 
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.04); 
 }
 
-/* Texto interno de la burbuja */
+/* Texto interno de la burbuja en regular */
 .burbuja-descripcion-granate p {
     font-family: 'Montserrat', sans-serif;
-    font-weight: 700; /* Montserrat bold */
+    font-weight: 400; /* Removido el bold de las descripciones */
     color: #ffffff;
     font-size: 1.15rem;
-    line-height: 1.6;
+    line-height: 1.7;
     margin: 0;
 }
 
