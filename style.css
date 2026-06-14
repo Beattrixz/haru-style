@@ -161,7 +161,7 @@ h1, h2, h3, .titulo-seccion, .nombre-pais, .titulo-subestilo {
     text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.7); /* Sombra suave para separar el texto del fondo */
 }
 
-/* Modificación de tipografía solicitada por Paola */
+/* Modificación de tipografía */
 .contenido-inicio h1 {
     font-size: 3.5rem;
     margin-bottom: 20px;
